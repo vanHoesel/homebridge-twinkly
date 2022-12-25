@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-twinkly",
-  "version": "0.4.1",
-  "description": "Homebridge plugin for Twinkly christmas lights",
+  "name": "homebridge-twinkly-plus",
+  "version": "0.5.0",
+  "description": "Homebridge plugin for Twinkly Lights",
   "main": "index.js",
   "bin": {
     "twinkly": "bin/twinkly"
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nschum/homebridge-twinkly.git"
+    "url": "git+https://github.com/vanHoesel/homebridge-twinkly-plus.git"
   },
   "keywords": [
     "homebrige",
@@ -30,10 +30,10 @@
     "node": ">=14.5.0",
     "homebridge": ">=1.1.6"
   },
-  "author": "Nikolaj Schumacher",
+  "author": "Theo van Hoesel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nschum/homebridge-twinkly/issues"
+    "url": "https://github.com/vanHoesel/homebridge-twinkly-plus/issues"
   },
-  "homepage": "https://github.com/nschum/homebridge-twinkly#readme"
+  "homepage": "https://github.com/vanHoesel/homebridge-twinkly-plus#readme"
 }

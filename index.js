@@ -1,15 +1,15 @@
 const {Twinkly} = require("./lib/Twinkly");
 const {Discoverer} = require("./lib/Discoverer");
 
-const PLUGIN_NAME = "homebridge-twinkly";
-const ACCESSORY_NAME = "Twinkly";
-const PLATFORM_NAME = "Twinkly";
+const PLUGIN_NAME = "homebridge-twinkly-plus";
+const ACCESSORY_NAME = "TwinklyPlus";
+const PLATFORM_NAME = "TwinklyPlus";
 const MS_PER_MINUTE = 60_000;
 
 let hap, Service, Characteristic;
 
 // "accessories": [{
-//     "accessory": "Twinkly",
+//     "accessory": "TwinklyPlus",
 //     "name": "Christmas Tree",
 //     "ip": "192.168.4.1",
 //     "allowBrightnessControl": true,
@@ -26,7 +26,7 @@ class TwinklyHomebridge extends Twinkly {
         let name = config["name"];
         if (!name) {
             log("No name specified");
-            name = "Twinkly";
+            name = "TwinklyPlus";
         }
         this.name = name;
         this.isBrightnessControlEnabled = config["allowBrightnessControl"];
