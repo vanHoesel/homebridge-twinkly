@@ -4,7 +4,7 @@
   "description": "Homebridge plugin for Twinkly Lights",
   "main": "index.js",
   "bin": {
-    "twinkly": "bin/twinkly"
+    "twinkly-cli": "bin/twinkly-cli"
   },
   "dependencies": {
     "commander": "^6.2.0",

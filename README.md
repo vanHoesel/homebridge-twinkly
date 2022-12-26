@@ -85,27 +85,27 @@ Multiple lights are can be added as individual accessories.
 
 Discover devices on network:
 ```
-twinkly --discover
+twinkly-cli --discover
 ```
 
 Turn on:
 ```
-twinkly --mode movie
+twinkly-cli --mode movie
 ```
 
 Turn off:
 ```
-twinkly --mode off
+twinkly-cli --mode off
 ```
 
 Set brightness to 50%:
 ```
-twinkly --brightness 50
+twinkly-cli --brightness 50
 ```
 
 Blink:
 ```
-twinkly -c 128,0,0 -c 0,255,0 -c 64,0,6 --effect blink --delay 500
+twinkly-cli -c 128,0,0 -c 0,255,0 -c 64,0,6 --effect blink --delay 500
 ```
 
 ## Acknowledgements
