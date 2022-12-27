@@ -108,6 +108,14 @@ Blink:
 twinkly-cli -c 128,0,0 -c 0,255,0 -c 64,0,6 --effect blink --delay 500
 ```
 
+## Issues
+
+### Same Config as for `homebridge-twinkly` plugin
+
+This plugin uses the exact same configuration as the previous `homebridge-twinkly`.
+That is just a nice convenience. However, if you have used the original plugin,
+just be sure you disable it, so you do not cause any conflicts.
+
 ## Acknowledgements
 
 Thanks to Pavol Babinčák for [documenting](https://xled.readthedocs.io/en/latest/) the private API.
