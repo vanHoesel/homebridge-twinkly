@@ -122,7 +122,9 @@ class TwinklyPlatform {
         this.startTime = new Date();
 
         api.on("didFinishLaunching", () => {
-            setInterval(() => this.scan(), this.scanInterval);
+            if ( this.scanInterval ) {
+                setInterval(() => this.scan(), this.scanInterval);
+            }
             this.scan();
         });
 
