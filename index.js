@@ -5,6 +5,7 @@ const PLUGIN_NAME = "homebridge-twinkly-plus";
 const ACCESSORY_NAME = "Twinkly";
 const PLATFORM_NAME = "Twinkly";
 const MS_PER_MINUTE = 60_000;
+const MS_PER_SECOND = 1_000;
 
 let hap, Service, Characteristic;
 
@@ -107,7 +108,13 @@ class TwinklyPlatform {
 
         this.verbose = config.verbose;
         this.timeout = config.timeout || 1000;
-        this.scanInterval = config.scanInterval || 60_000;
+        
+        let scanInterval = config.scanInterval;
+        if (scanInterval === undefined ) {
+            scanInterval = 60;
+        }
+        this.scanInterval = scanInterval * MS_PER_SECOND;
+        
         this.offlineRemoveTime = (config["removeUnreachableDeviceMinutes"] || 0) * MS_PER_MINUTE;
         this.api = api;
         this.accessories = new Map();
@@ -115,7 +122,9 @@ class TwinklyPlatform {
         this.startTime = new Date();
 
         api.on("didFinishLaunching", () => {
-            setInterval(() => this.scan(), this.scanInterval);
+            if ( this.scanInterval ) {
+                setInterval(() => this.scan(), this.scanInterval);
+            }
             this.scan();
         });
 
