@@ -29,6 +29,18 @@
           { "title": "30 days", "type": "number", "enum": [43200] }
         ],
         "description": "“None” means never remove them"
+      },
+      "scanInterval": {
+        "title": "Time between scan for new devices",
+        "type": "integer",
+        "default": 0,
+        "minimum": 0,
+        "oneOf": [
+          { "title": "5 seconds", "type": "number", "enum": [5] },
+          { "title": "1 minute", "type": "number", "enum": [60] },
+          { "title": "15 minutes", "type": "number", "enum": [900] }
+        ],
+        "description": "“None” means do not scan for new devices"
       }
     }
   },
