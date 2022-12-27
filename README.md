@@ -37,7 +37,7 @@ The options can be configured using the UI or manually in a config.json.
     "name": "…"
   },
   "platforms": [{
-    "platform": "TwinklyPlus",
+    "platform": "Twinkly",
     "allowBrightnessControl": true,
     "allowColorControl": true,
     "removeUnreachableDeviceMinutes": 0
@@ -55,7 +55,7 @@ You'll need to find the IP address of each light using the Twinkly app. It might
 
 | Value                  | Default       | Description                                                 |
 |------------------------|---------------|-------------------------------------------------------------|
-| accessory              | (required)    | Identifies module and must be `"TwinklyPlus"`               |
+| accessory              | (required)    | Identifies module and must be `"Twinkly"`                   |
 | name                   | (required)    | The name for light as it will appear in HomeKit             |
 | ip                     | (required)    | The IP address of the lights.                               |
 | allowBrightnessControl | true          | Adds a brightness control instead of a simple on/off switch |
@@ -72,7 +72,7 @@ Multiple lights are can be added as individual accessories.
     "name": "…"
   },
   "accessories": [{
-    "accessory": "TwinklyPlus",
+    "accessory": "Twinkly",
     "name": "Christmas Lights",
     "ip": "192.168.4.1",
     "allowBrightnessControl": true
@@ -107,6 +107,14 @@ Blink:
 ```
 twinkly-cli -c 128,0,0 -c 0,255,0 -c 64,0,6 --effect blink --delay 500
 ```
+
+## Issues
+
+### Same Config as for `homebridge-twinkly` plugin
+
+This plugin uses the exact same configuration as the previous `homebridge-twinkly`.
+That is just a nice convenience. However, if you have used the original plugin,
+just be sure you disable it, so you do not cause any conflicts.
 
 ## Acknowledgements
 

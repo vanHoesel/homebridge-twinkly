@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "TwinklyPlus",
+  "pluginAlias": "Twinkly",
   "pluginType": "platform",
   "singular": true,
   "headerDisplay": "Configure Twinkly using the iOS or Android app and make sure it's connected to the same network",
